@@ -39,3 +39,21 @@ function determineWinner(humanChoice, computerChoice) {
         return "Computer wins!";
     }
 }
+
+//Function to play a single round
+function playRound() {
+    //Get the choices
+    const humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice();
+
+    //Log the choices
+    console.log(`You chose: ${humanChoice}`);
+    console.log(`Computer chose: ${computerChoice}`);
+
+    //Log the winner
+    console.log(determineWinner(humanChoice, computerChoice));
+
+    //Log the scores
+    console.log("Human Score: ", humanScore);
+    console.log("Computer Score: ", computerScore);
+}
