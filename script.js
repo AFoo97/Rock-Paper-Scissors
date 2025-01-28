@@ -16,3 +16,26 @@ function getHumanChoice() {
 
     return humanChoice;
 }
+
+//Declare the player score variables and initialize them to 0
+let humanScore = 0;
+let computerScore = 0;
+
+//Function to determine the winner
+function determineWinner(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        return "It's a tie!";
+    } else if (humanChoice === "rock" && computerChoice === "scissors") {
+        humanScore++;
+        return "You win!";
+    } else if (humanChoice === "paper" && computerChoice === "rock") {
+        humanScore++;
+        return "You win!";
+    } else if (humanChoice === "scissors" && computerChoice === "paper") {
+        humanScore++;
+        return "You win!";
+    } else {
+        computerScore++;
+        return "Computer wins!";
+    }
+}
